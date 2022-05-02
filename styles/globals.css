@@ -1,0 +1,80 @@
+/* CSS customizado */
+:root{
+  --blue-dark: #293040
+}
+
+*{
+  /* box-sizing: border-box; */
+  margin:0;
+  padding: 0;
+}
+
+html{
+  width: 100%;
+}
+
+.outline-none{
+  outline: none;
+}
+.bg-dark-blue{
+  background: var(--blue-dark);
+}
+.h-90{
+  height: 90%!important;
+}
+.h-95{
+  height: 95%!important;
+}
+.h-60{
+  height: 60%!important;
+}
+.h-70{
+  height: 70%!important;
+}
+.h-30{
+  height: 30%!important;
+}
+.h-10{
+  height: 10%!important;
+}
+.h-15{
+  height: 15%!important;
+}
+.h-20{
+  height: 20%!important;
+}
+.h-5{
+  height: 5%!important;
+}
+.w-5{
+  width: 5%!important;
+}
+.w-45{
+  width: 45%!important;
+}
+.w-95{
+  width: 95%!important;
+}
+
+.fs-7{
+  font-size: 14px;
+}
+
+
+.overflow-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;             /* width of the entire scrollbar */
+}
+
+.overflow-scroll::-webkit-scrollbar-track {
+  background: none;        /* color of the tracking area */
+}
+
+.overflow-scroll::-webkit-scrollbar-thumb {
+  background-color: rgb(30, 30, 30);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+.bg-gradient-50{
+  background: linear-gradient(to bottom, #0d6efd 50%, white 50%) no-repeat;
+}
