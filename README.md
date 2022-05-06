@@ -46,4 +46,4 @@ Para a criação do projeto foi usado:
 ## 📌 Observações
   
   - Quando a página de index é recarregada, é retornado um erro (`window is not defined`). Ainda não foi indentificada uma solução.
-  - Os inputs do tipo `date` deveriam ser feitos a partir do [datepicker](https://reactdatepicker.com/), mas, na importação do módulo, era apresentado que "o módulo não foi encontrado.
+  - Os inputs do tipo `date` deveriam ser feitos a partir do [datepicker](https://reactdatepicker.com/), mas, na importação do módulo, era apresentado que "o módulo não foi encontrado", então foi usado um elemento input do próprio HTML.
