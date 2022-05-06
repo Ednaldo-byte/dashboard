@@ -1,80 +1,178 @@
 /* CSS customizado */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 :root{
   --blue-dark: #293040
 }
 
 *{
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   margin:0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
-
-html{
-  width: 100%;
+th, td, span, .fs-5, .fs-6, .fs-7{
+  font-size: 80%!important;
 }
-
+#thead{
+  vertical-align: bottom!important;
+}
 .outline-none{
   outline: none;
 }
 .bg-dark-blue{
   background: var(--blue-dark);
 }
-.h-90{
-  height: 90%!important;
-}
-.h-95{
-  height: 95%!important;
-}
-.h-60{
-  height: 60%!important;
-}
-.h-70{
-  height: 70%!important;
-}
-.h-30{
-  height: 30%!important;
-}
-.h-10{
-  height: 10%!important;
-}
-.h-15{
-  height: 15%!important;
-}
-.h-20{
-  height: 20%!important;
-}
-.h-5{
-  height: 5%!important;
-}
-.w-5{
-  width: 5%!important;
-}
-.w-45{
-  width: 45%!important;
-}
-.w-95{
-  width: 95%!important;
-}
-
 .fs-7{
   font-size: 14px;
 }
-
-
+.fs-8{
+  font-size: 12px;
+}
+.header{
+  height: 4rem!important;
+}
+.chartArea{
+  width: 65%!important;
+}
+.product{
+  height: 50%!important;
+}
+.productMarketArea{
+  width: 35%!important;
+}
+.columnChart{
+  width: 50%;
+}
+.sideBar{
+  height: 100%!important;
+}
+.transition-1{
+  transition: 400ms;
+}
+.dropdown-toggle-none::after{
+  display: none!important;
+}
+.cursor-default{
+  cursor: default!important;
+}
+.cursor-pointer{
+  cursor: pointer!important;
+}
+.no-shadow:focus{
+  box-shadow: none!important;
+}
+.overflow-scrollX{
+  overflow-x: scroll;
+}
+body::-webkit-scrollbar,
 .overflow-scroll::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;             /* width of the entire scrollbar */
+  width: 7px;
+  height: 7px;
+  padding: 10px;
+  background: transparent;
 }
-
+body::-webkit-scrollbar-track,
 .overflow-scroll::-webkit-scrollbar-track {
-  background: none;        /* color of the tracking area */
+  background: transparent;
 }
-
+body::-webkit-scrollbar-thumb,
 .overflow-scroll::-webkit-scrollbar-thumb {
-  background-color: rgb(30, 30, 30);    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
+  background-color: rgb(159, 159, 159);
+  border-radius: 20px;
+}
+.login{
+  width: 50%;
 }
 
 .bg-gradient-50{
   background: linear-gradient(to bottom, #0d6efd 50%, white 50%) no-repeat;
+}
+
+@media (max-width: 1360px){
+  th, td, span, .fs-5, .fs-6, .fs-7{
+    font-size: 85%!important;
+  }
+  .tableContainer{
+    overflow: scroll!important;
+  }
+}
+
+@media(max-width: 1500px){
+  th, td, span, .fs-5, .fs-6, .fs-7{
+    font-size: 85%!important;
+  }
+}
+
+@media(max-width: 1024px){
+  #content{
+    height: auto;
+    flex-direction: column!important;
+  }
+  #content .productMarketArea{
+    width: 100%!important;
+    height: 50%!important;
+  }
+
+  #content .chartArea{
+    width: 100%!important;
+  }
+  #content .chartArea{
+    height: 100vw;
+  }
+  #content .col{
+    width: 100%!important;
+    flex-direction: row!important;
+  }
+  .chartArea{
+    height: 100%!important;
+  }
+  .cardChart{
+    height: 25rem!important;
+  }
+}
+
+@media (max-width: 770px){
+  .login{
+    width: 90vw!important;
+  }
+  .dashboard > .row{
+    height: 100rem!important;
+    background: #000;
+    display: flex!important;
+    flex-direction: column!important;
+    flex-wrap: nowrap!important;
+  }
+  .columnCard{
+    width: 100%!important;
+    display: flex!important;
+    flex-direction: column!important;
+  }
+  .columnChart{
+    width: 100%;
+  }
+  .menu{
+    display: none;
+  }
+  .sideBar{
+    width: 5rem!important;
+    height: 4rem!important;
+    border-radius: 25px;
+    z-index: 1;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex!important;
+  }
+  .sidebar > .mt-4{
+    margin-top: 0px!important;
+  }
+}
+
+@media(max-width: 375px){
+  .login{
+    width: 100%!important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

@@ -1,45 +1,51 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
 import Header from '../components/header';
 import SideBar from '../components/sideBar';
 import CardProduct from '../components/cards/product';
 import CardMarketplaceList from '../components/cards/marketplace_list';
 import CardFilter from '../components/cards/filters';
 import ChartArea from '../components/cards/charts/chartArea';
-
-import 'bootstrap/dist/js/bootstrap.min.js'
+import { useContext } from 'react';
+import { AuthContext } from '../context/auth';
 
 const Home: NextPage = () => {
+
+  const { isActive } = useContext(AuthContext)
+
   return (
     <>
-      <head>
+      <Head>
         <title>Dashboard - Tracking Trade</title>
-      </head>
+      </Head>
 
       <main>
-
-        <div className='bg-light w-100 vh-100 m-0 gy-0'>
-          <div className="row gx-0">
-            <div className='col-lg-1 p-0 w-5 position-relative'>
-                <SideBar/>
+        <div className='w-100 m-0 dashboard'>
+          <div className="row gx-0 layout">
+            <div className="p-0 position-relative sidebar-collapsed transition-1"
+            style={{width: isActive ? '13rem' : '4rem'}}>
+              <SideBar/>
             </div>
-            <div className='bg-light col w-95 h-100 p-0 d-grid'>
-              <div className='row gx-0 h-100'><Header/></div>
-              <div className='row gx-0 w-10 h-100 p-3 gap-3'>
+            <div className='bg-light col p-0 d-grid'>
+              <div className='gx-0 header'>
+                <Header/>
+              </div>
+              <div className='w-100 p-3 gap-3 d-flex' id='content'>
 
-                <div className="col-lg-4 h-100 d-grid gap-3">
+                <div className="d-flex flex-column gap-3 productMarketArea">
                   <CardProduct/>
                   <CardMarketplaceList/>
                 </div>
 
-                <div className="col gap-3 h-100">
-                  <div className="row gx-0 h-10">
+                <div className="gap-3 d-flex flex-column chartArea">
+                  <div className="filter">
                     <CardFilter/>
                   </div>
-                  <div className="row gx-0 h-90 pt-3 gap-3 ">
-                    <div className="col">
+                  <div className="h-100 p-0 gap-3 d-flex columnCard">
+                    <div className="columnChart">
                       <ChartArea/>
                     </div>
-                    <div className="col">
+                    <div className="columnChart">
                       <ChartArea/>
                     </div>
                   </div>

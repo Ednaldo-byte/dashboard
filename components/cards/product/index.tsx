@@ -3,9 +3,9 @@ import { BiHelpCircle, BiStar } from "react-icons/bi";
 
 export default function CardProduct(){
   return(
-    <div className="card h-100 w-100 bg-gradient-50">
+    <div className="card w-100 product">
 
-      <div className="h-50 p-3">
+      <div className="h-50 p-3 bg-primary">
         <span className="fs-5 fw-bold text-light">S21 (128BG)</span>
         <br />
         <span className="fs-6 fw-bold text-light">SAMSUNG</span>
@@ -29,7 +29,7 @@ export default function CardProduct(){
             <BiHelpCircle size={20}/>
           </span>
         </div>
-        <span>Last scraping 2022-01-06</span>
+        <span>Last scraping: 2022-01-06</span>
       </div>
     </div>
   )

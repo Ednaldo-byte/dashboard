@@ -1,17 +1,21 @@
+import { Dropdown, DropdownButton } from "react-bootstrap";
 import { BiMenu } from "react-icons/bi";
+import { DropdownItem, DropdownToggle } from "reactstrap";
 
 export default function MenuDownloads(){
   return(
-    <div className="dropdown">
-      <button className="bg-transparent border-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-        <BiMenu size={25}/>
-      </button>
-      <ul className="dropdown-menu shadow" aria-labelledby="dropdownMenuButton1">
-        <li><a className="dropdown-item" href="#">Download SVG</a></li>
-        <li><a className="dropdown-item" href="#">Download PNG</a></li>
-        <li><a className="dropdown-item" href="#">Download CSV</a></li>
-      </ul>
-    </div>
+
+    <Dropdown>
+      <Dropdown.Toggle variant="transparent" className='dropdown-toggle-none no-shadow p-0 cursor-pointer'>
+        <BiMenu size={23} color='#686666'/>
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu className='shadow'>
+        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
     
   )
 }

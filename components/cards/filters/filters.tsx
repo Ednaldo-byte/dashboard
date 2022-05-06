@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Button, Modal } from "react-bootstrap";
 import { Container, ContainerFilters } from "./containers";
 
 export function Period(){
@@ -5,15 +7,24 @@ export function Period(){
     <Container title="Period">
 
         <ContainerFilters>
-          <form className="w-100 d-flex" id="form1">
-            <input type="radio" className="btn-check" name="options" id="option1" form="form1" autoComplete="off" checked/>
-            <label className="btn-primary w-100 py-2" htmlFor="option1">Day</label>
+          <form className="w-100 form-check w-100 h-100 p-0 d-flex">
 
-            <input type="radio" className="btn-check" name="options" id="option2" form="form1" autoComplete="off"/>
-            <label className="btn-primary w-100 py-2" htmlFor="option2">Hour</label>
-            
-            <input type="radio" className="btn-check" name="options" id="option3" form="form1" autoComplete="off"/>
-            <label className="btn-primary w-100 py-2" htmlFor="option3">Week</label>
+              <input className="btn-check form-check-input d-none" type="radio" name="flexRadioDefault" id="flexRadioDefault1" defaultChecked/>
+              <label className="btn-primary w-100 p-2 text-truncate d-flex justify-content-center align-items-center cursor-pointer" htmlFor="flexRadioDefault1">
+                <span>Hour</span>
+              </label>
+
+              <input className="btn-check form-check-input d-none" type="radio" name="flexRadioDefault" id="flexRadioDefault2" defaultChecked/>
+              <label className="btn-primary w-100 p-2 text-truncate d-flex justify-content-center align-items-center cursor-pointer" htmlFor="flexRadioDefault2">
+                <span>Day</span>
+              </label>
+
+              <input className="btn-check form-check-input d-none" type="radio" name="flexRadioDefault" id="flexRadioDefault3" defaultChecked/>
+              <label className="btn-primary w-100 p-2 text-truncate d-flex justify-content-center align-items-center
+              cursor-pointer" htmlFor="flexRadioDefault3">
+                <span>Week</span>
+              </label>
+
           </form>
         </ContainerFilters>
 
@@ -23,11 +34,13 @@ export function Period(){
 }
 
 export function Date(){
+
   return(
     <Container title="Date">
 
       <ContainerFilters>
-        <input type="date" className="btn-primary w-100 border-0 text-center"/>
+        <input type='date' className="btn-primary w-100 p-2  d-flex justify-content-center align-items-center cursor-pointer"
+        value='2022-01-06'/>
       </ContainerFilters>
 
     </Container>
@@ -39,12 +52,20 @@ export function Payment(){
     <Container title="Form of payment">
 
       <ContainerFilters>
-        <form className="w-100 d-flex">
-          <input type="radio" className="btn-check" name="options" id="option4" autoComplete="off" checked/>
-          <label className="btn-primary w-100 py-2" htmlFor="option4">Checked</label>
+        <form className="w-100 form-check w-100 h-100 p-0 d-flex">
 
-          <input type="radio" className="btn-check" name="options" id="option5" autoComplete="off"/>
-          <label className="btn-primary w-100 py-2" htmlFor="option5">Checked</label>
+          <input className="btn-check form-check-input d-none" type="radio" name="flexRadioDefault" id="flexRadioDefault4" defaultChecked/>
+          <label className="btn-primary w-100 p-2 text-truncate d-flex justify-content-center align-items-center
+          cursor-pointer" htmlFor="flexRadioDefault4">
+            <span>Spot Price</span>
+          </label>
+
+          <input className="btn-check form-check-input d-none" type="radio" name="flexRadioDefault" id="flexRadioDefault5" defaultChecked/>
+          <label className="btn-primary w-100 p-2  d-flex justify-content-center align-items-center cursor-pointer" 
+          htmlFor="flexRadioDefault5">
+            <span className="text-truncate text-nowrap">Installment Price</span>
+          </label>
+
         </form>
       </ContainerFilters>
 
@@ -53,31 +74,34 @@ export function Payment(){
 }
 
 export function AllMarketplaces(){
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return(
-    <Container title="MArketplaces">
+    <Container title="Marketplaces">
 
       <ContainerFilters>
-        <button type="button" className="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-          All Marketplaces
-        </button>
+      <Button variant="primary" onClick={handleShow} className='w-100 text-nowrap text-truncate d-flex justify-content-center align-items-center cursor-pointer'>
+        <span>All Marketplaces</span>
+      </Button>
 
-        <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title" id="staticBackdropLabel">Modal title</h5>
-                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div className="modal-body">
-                ...
-              </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary">Understood</button>
-              </div>
-            </div>
-          </div>
-        </div>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Cancel
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Confirm
+          </Button>
+        </Modal.Footer>
+      </Modal>
       </ContainerFilters>
 
     </Container>

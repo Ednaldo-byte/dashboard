@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { BiHelpCircle, BiMenu } from "react-icons/bi";
 import Help from "./help";
 import MenuDownloads from "./menuDownloads";
 
@@ -10,10 +9,10 @@ interface propsChartCard{
 
 export default function ChartCard({title, children}: propsChartCard){
   return(
-    <div className="card bg-white w-100 h-100">
+    <div className="card bg-white w-100 p-3 h-100 cardChart">
 
-      <div className="container p-3 w-100  d-flex align-items-start">
-        <div className="d-flex align-items-center">
+      <div className="container w-100 d-flex align-items-start">
+        <div className="d-flex align-items-start">
           <MenuDownloads/>
           <Help text={title}/>
         </div>
@@ -26,7 +25,7 @@ export default function ChartCard({title, children}: propsChartCard){
         </div>
       </div>
 
-      <div className="w-100 h-100">
+      <div className="w-100 h-100 overflow-scroll">
         {children}
       </div>
 
