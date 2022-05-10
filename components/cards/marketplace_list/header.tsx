@@ -9,13 +9,13 @@ export default function HeaderMarketplace(){
           <BiHelpCircle/>
         </div>
 
-        <div className="w-50 d-flex justify-content-end">
+        <div className=" d-flex justify-content-end">
           <div className="d-flex flex-column me-3">
             <span className="mb-2 legend">Date</span>
             <input type="date" value='2022-01-06' className="btn btn-primary"/>
           </div>
 
-          <div className="w-50 d-flex flex-column">
+          <div className="d-flex flex-column justify-content-end">
 
             <span className="mb-2 legend">Price</span>
 

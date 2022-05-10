@@ -39,7 +39,7 @@ export function Date(){
     <Container title="Date">
 
       <ContainerFilters>
-        <input type='date' className="btn-primary w-100 p-2  d-flex justify-content-center align-items-center cursor-pointer"
+        <input type='date' className="btn-primary w-100 p-2 text-center d-flex justify-content-center align-items-center cursor-pointer border-0"
         value='2022-01-06'/>
       </ContainerFilters>
 

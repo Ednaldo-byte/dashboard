@@ -20,13 +20,13 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <div className='w-100 m-0 dashboard'>
+        <div className='w-100 h-100 bg-light m-0 dashboard'>
           <div className="row gx-0 layout">
             <div className="p-0 position-relative sidebar-collapsed transition-1"
-            style={{width: isActive ? '13rem' : '4rem'}}>
+            style={{width: isActive ? '18rem' : '5rem'}}>
               <SideBar/>
             </div>
-            <div className='bg-light col p-0 d-grid'>
+            <div className='col p-0 d-grid'>
               <div className='gx-0 header'>
                 <Header/>
               </div>

@@ -20,7 +20,7 @@ export default function Header(){
         onClick={() => {
           setIsActive(!isActive)
         }}>
-          <BiMenu size={25}/>
+          <BiMenu size={17}/>
         </button>
         
           <Dropdown style={{width: '25%', padding: '0px'}}>
@@ -47,7 +47,7 @@ export default function Header(){
       <div className="w-25 d-flex align-items-center justify-content-end me-2">
 
         <button className="bg-transparent border-0 me-3" onClick={toggleFullScreen}>
-          <BiFullscreen size={25}/>
+          <BiFullscreen size={17}/>
         </button>
 
           <Dropdown>

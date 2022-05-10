@@ -3,12 +3,12 @@ import { BiHelpCircle, BiStar } from "react-icons/bi";
 
 export default function CardProduct(){
   return(
-    <div className="card w-100 product">
+    <div className="bg-white w-100 radius product overflow-hidden">
 
       <div className="h-50 p-3 bg-primary">
-        <span className="fs-5 fw-bold text-light">S21 (128BG)</span>
+        <span className="fs-4 fw-bold text-light">S21 (128BG)</span>
         <br />
-        <span className="fs-6 fw-bold text-light">SAMSUNG</span>
+        <span className="fs-5 fw-bold text-light">SAMSUNG</span>
         <br />
         <div className="mt-4">
           <span className="fs-6 text-light">RRP: R$ 5.999</span>

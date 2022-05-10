@@ -1,13 +1,12 @@
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import { BiMenu } from "react-icons/bi";
-import { DropdownItem, DropdownToggle } from "reactstrap";
 
 export default function MenuDownloads(){
   return(
 
     <Dropdown>
       <Dropdown.Toggle variant="transparent" className='dropdown-toggle-none no-shadow p-0 cursor-pointer'>
-        <BiMenu size={23} color='#686666'/>
+        <BiMenu size={21} color='#686666'/>
       </Dropdown.Toggle>
 
       <Dropdown.Menu className='shadow'>

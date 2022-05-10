@@ -2,16 +2,15 @@ import { ApexOptions } from "apexcharts";
 
 export const series = [{
   name: 'Share Custumer',
-  data: [2.3, 3.1, 4.0, 0.8, 0.5, 0.2, 2.3, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4,3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+  data: [25, 55, 44, 63, 63, 44, 13, 0, 0, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 },
 {
   name: 'Share Hour',
-  data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 0.5, 0.2, 2.3, 3.1, 1.4, 0.8, 0.5, 0.2]
+  data: [100, 100, 100, 100, 100, 100, 100, 0, 0, 100, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 }]
 
 export const options: ApexOptions = {
   chart: {
-    height: 350,
     type: 'bar',
   },
   plotOptions: {
@@ -39,37 +38,15 @@ export const options: ApexOptions = {
   xaxis: {
     categories: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
     position: 'bottom',
-    axisBorder: {
-      show: false
-    },
-    axisTicks: {
-      show: false
-    },
-    crosshairs: {
-      fill: {
-        type: 'gradient',
-        gradient: {
-          colorFrom: '#D8E3F0',
-          colorTo: '#BED1E6',
-          stops: [0, 100],
-          opacityFrom: 0.4,
-          opacityTo: 0.5,
-        }
-      }
-    },
     tooltip: {
       enabled: true,
     }
   },
   yaxis: {
-    axisBorder: {
-      show: false
-    },
-    axisTicks: {
-      show: false,
-    },
+    min: 0,
+    max: 100,
     labels: {
-      show: false,
+      show: true,
       formatter: function (val) {
         return val + "%";
       }
@@ -78,12 +55,6 @@ export const options: ApexOptions = {
   },
   title: {
     text: '',
-    floating: true,
-    offsetY: 330,
-    align: 'center',
-    style: {
-      color: '#444'
-    }
   },
   legend:{
     show: true,
@@ -94,5 +65,6 @@ export const options: ApexOptions = {
     markers:{
       radius: 20
     }
-  }
+  },
+  colors: ['#F2B66D', '#2467BF']
 }
