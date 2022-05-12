@@ -1,4 +1,5 @@
 import { BiHelpCircle, BiStar } from "react-icons/bi";
+import Help from "../../help";
 
 
 export default function CardProduct(){
@@ -12,7 +13,7 @@ export default function CardProduct(){
         <br />
         <div className="mt-4">
           <span className="fs-6 text-light">RRP: R$ 5.999</span>
-          <div className="bg-dark mt-2" style={{width: '5rem', height: '6rem'}}></div>
+          <div className="bg-dark mt-2" style={{width: '6rem', height: '7rem'}}></div>
         </div>
 
       </div>
@@ -26,7 +27,7 @@ export default function CardProduct(){
           <BiStar color="#FDCA03"/> 
           <BiStar color="#2246FA"/>
           <span className="ms-2">
-            <BiHelpCircle size={20}/>
+            <Help text="Product"/>
           </span>
         </div>
         <span>Last scraping: 2022-01-06</span>

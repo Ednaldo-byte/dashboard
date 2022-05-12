@@ -7,7 +7,7 @@ interface children{
 
 export function Container({children, title}: children){
   return(
-    <div className=" col w-100 d-flex flex-column flex-wrap">
+    <div className="col w-100 d-flex flex-column flex-wrap">
       <span>{title}</span>
       {children}
     </div>

@@ -30,7 +30,7 @@
   height: 5rem!important;
 }
 .product{
-  height: 30%!important;
+  height: 40%!important;
 }
 .chartArea{
   width: 70%!important;
@@ -83,7 +83,9 @@ body::-webkit-scrollbar-thumb,
   border-radius: 20px;
 }
 .login{
-  width: 50%;
+  width: 30%;
+  height: auto;
+  border-top: #0d6efd solid .5rem;
 }
 
 .bg-gradient-50{

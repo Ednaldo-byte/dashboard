@@ -1,13 +1,17 @@
-import Link from "next/link";
+import {useRouter} from "next/router";
+import { setCookie } from "nookies";
 import { useContext} from "react";
 import { Dropdown} from "react-bootstrap";
 import { BiSearchAlt, BiFullscreen, BiPowerOff, BiMenu } from "react-icons/bi";
 import { AuthContext } from "../../context/auth";
+import { signInRequest } from "../../services/auth";
 import { toggleFullScreen } from "./fullScreen";
+import { SignInData } from "../../context/auth";
 
 export default function Header(){
 
-  const { setIsActive, isActive } = useContext(AuthContext)
+  const { setIsActive, isActive, user } = useContext(AuthContext)
+  const router = useRouter()
 
   return(
     <header className="w-100 p-3 bg-body d-flex justify-content-between align-items-center header">
@@ -55,14 +59,12 @@ export default function Header(){
             <div className="rounded-pill bg-primary p-2 me-2">
               <span className="text-white fw-bold">RM</span>
             </div>
-              <span>Raphael</span>
+              <span>{user?.name}</span>
             </Dropdown.Toggle>
-            <Dropdown.Menu className='shadow' align={{lg: 'end'}}>
-              <Link href={'/login'}>              
-                <Dropdown.Item>
+            <Dropdown.Menu className='shadow' align={{lg: 'end'}}>            
+                <Dropdown.Item onClick={(e) => console.log(e)}>
                   <BiPowerOff color="red" size='20'/> Logout
                 </Dropdown.Item>
-              </Link>
             </Dropdown.Menu>
           </Dropdown>
       </div>

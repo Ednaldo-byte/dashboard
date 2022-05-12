@@ -1,5 +1,6 @@
-import type { NextPage } from 'next'
+import type { GetServerSideProps, NextPage } from 'next'
 import Head from 'next/head'
+import Router from 'next/router'
 import Header from '../components/header';
 import SideBar from '../components/sideBar';
 import CardProduct from '../components/cards/product';
@@ -8,10 +9,11 @@ import CardFilter from '../components/cards/filters';
 import ChartArea from '../components/cards/charts/chartArea';
 import { useContext } from 'react';
 import { AuthContext } from '../context/auth';
+import { parseCookies } from "nookies";
 
 const Home: NextPage = () => {
 
-  const { isActive } = useContext(AuthContext)
+  const { isActive  } = useContext(AuthContext)
 
   return (
     <>
@@ -60,4 +62,21 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+
+export const getServerSideProps: GetServerSideProps = async(ctx) => {
+const {['nextauth.token']: token} = parseCookies(ctx)
+if(!token){
+  return{
+    redirect: {
+      destination: '/login',
+      permanent: false
+    }
+  }
+}
+
+  return{
+    props: {}
+  }
+}
 

@@ -49,10 +49,9 @@ export const options: ApexOptions = {
   dataLabels: {
     enabled: true,
     enabledOnSeries: [0, 1, 2, 3, 4],
-    formatter: function (value, { seriesIndex } ) {
-        return value + '%'
-      
-    },
+    // formatter: function (value, { seriesIndex } ) {
+    //     return value + '%'
+    // },
     offsetY: -8,
     background: {
       enabled: false,

@@ -8,15 +8,14 @@ export default function TableMarketplace(){
       <table className="table">
         <tbody>
           <tr className="fs-7 text-center" id="thead">
-            <th scope="col text-start">Marketplace</th>
-            <th scope="col">Presence</th>
+            <th scope="col">Marketplace</th>
+            <th scope="col"><span>Presence</span></th>
             <th scope="col">SP (R$)</th>
             <th scope="col">%RRP</th>
             <th scope="col">IP (R$)</th>
             <th scope="col">%RRP</th>
             <th scope="col">View</th>
           </tr>
-
           {
             data.map((item) => {
               return(

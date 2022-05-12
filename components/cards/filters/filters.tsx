@@ -14,12 +14,12 @@ export function Period(){
                 <span>Hour</span>
               </label>
 
-              <input className="btn-check form-check-input d-none" type="radio" name="flexRadioDefault" id="flexRadioDefault2" defaultChecked/>
+              <input className="btn-check form-check-input d-none" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
               <label className="btn-primary w-100 p-2 text-truncate d-flex justify-content-center align-items-center cursor-pointer" htmlFor="flexRadioDefault2">
                 <span>Day</span>
               </label>
 
-              <input className="btn-check form-check-input d-none" type="radio" name="flexRadioDefault" id="flexRadioDefault3" defaultChecked/>
+              <input className="btn-check form-check-input d-none" type="radio" name="flexRadioDefault" id="flexRadioDefault3" />
               <label className="btn-primary w-100 p-2 text-truncate d-flex justify-content-center align-items-center
               cursor-pointer" htmlFor="flexRadioDefault3">
                 <span>Week</span>
@@ -40,7 +40,7 @@ export function Date(){
 
       <ContainerFilters>
         <input type='date' className="btn-primary w-100 p-2 text-center d-flex justify-content-center align-items-center cursor-pointer border-0"
-        value='2022-01-06'/>
+        defaultValue='2022-01-06'/>
       </ContainerFilters>
 
     </Container>
@@ -60,7 +60,7 @@ export function Payment(){
             <span>Spot Price</span>
           </label>
 
-          <input className="btn-check form-check-input d-none" type="radio" name="flexRadioDefault" id="flexRadioDefault5" defaultChecked/>
+          <input className="btn-check form-check-input d-none" type="radio" name="flexRadioDefault" id="flexRadioDefault5"/>
           <label className="btn-primary w-100 p-2  d-flex justify-content-center align-items-center cursor-pointer" 
           htmlFor="flexRadioDefault5">
             <span className="text-truncate text-nowrap">Installment Price</span>
