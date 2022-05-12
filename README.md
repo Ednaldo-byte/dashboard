@@ -15,6 +15,8 @@ Para a criação do projeto foi usado:
 - [bootstrap](https://getbootstrap.com/)
 - [yup](https://www.npmjs.com/package/yup)
 - [apexcharts](https://apexcharts.com/)
+- [uuid](https://www.npmjs.com/package/uuid)
+- [nookies](https://www.npmjs.com/package/nookies)
 
 ## 🖇 Executar o Projeto
   
@@ -36,7 +38,7 @@ Para a criação do projeto foi usado:
     ```
 - No navegador acesse:
     ```bash
-    $ localhost:3000/login
+    $ localhost:3000
     ```
 
 
@@ -46,6 +48,6 @@ Para a criação do projeto foi usado:
 ## 📌 Observações
   
   - Para logar e acessar a página de dashboard, use um desses usuários:
-    - Usuário: username, senha: teste%40example.com
-    - Usuário: password, senha: teste123
+    - Usuário: `username`, senha: `teste%40example.com`
+    - Usuário: `password`, senha: `teste123`
   - Os inputs do tipo `date` deveriam ser feitos a partir do [datepicker](https://reactdatepicker.com/), mas, na importação do módulo, era apresentado que "o módulo não foi encontrado", então foi usado um elemento input do próprio HTML.
