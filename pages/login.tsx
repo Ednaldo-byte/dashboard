@@ -35,10 +35,6 @@ export default function Login(){
 
   const { signIn } = useContext(AuthContext)
 
-  async function handleSignIn(data: any) {
-    await signIn(data)
-  }
-
   console.log(users)
 
   const { register, handleSubmit, formState: { errors } } = useForm<users>({ resolver: yupResolver(schema)})
