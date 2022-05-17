@@ -1,12 +1,9 @@
-import {useRouter} from "next/router";
-import { setCookie } from "nookies";
+import Router, {useRouter} from "next/router";
 import { useContext} from "react";
 import { Dropdown} from "react-bootstrap";
 import { BiSearchAlt, BiFullscreen, BiPowerOff, BiMenu } from "react-icons/bi";
 import { AuthContext } from "../../context/auth";
-import { signInRequest } from "../../services/auth";
 import { toggleFullScreen } from "./fullScreen";
-import { SignInData } from "../../context/auth";
 
 export default function Header(){
 
@@ -62,7 +59,7 @@ export default function Header(){
               <span>{user?.name}</span>
             </Dropdown.Toggle>
             <Dropdown.Menu className='shadow' align={{lg: 'end'}}>            
-                <Dropdown.Item onClick={(e) => console.log(e)}>
+                <Dropdown.Item onClick={() => router.push('/login')}>
                   <BiPowerOff color="red" size='20'/> Logout
                 </Dropdown.Item>
             </Dropdown.Menu>
